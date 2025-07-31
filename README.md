@@ -151,6 +151,15 @@ Here is a comprehensive example:
         "claude-opus-4-20250514",
         "gemini-2.5-pro"
       ]
+    },
+    {
+      "name": "AMD LLM GW",
+      "api_base_url": "https://llm-api.amd.com/azure/openai/deployments/your-deployment/chat/completions?api-version=2024-02-15-preview",
+      "api_key": "sk-",
+      "apim_key": "7cce1ac73d98442c844bb040b983114c",
+      "models": [
+        "gpt-4"
+      ]
     }
   ],
   "Router": {
@@ -200,6 +209,7 @@ The `Providers` array is where you define the different model providers you want
 - `name`: A unique name for the provider.
 - `api_base_url`: The full API endpoint for chat completions.
 - `api_key`: Your API key for the provider.
+- `apim_key` (optional): Azure APIM subscription key sent as the `Ocp-Apim-Subscription-Key` header.
 - `models`: A list of model names available from this provider.
 - `transformer` (optional): Specifies transformers to process requests and responses.
 
