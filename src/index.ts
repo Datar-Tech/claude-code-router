@@ -83,7 +83,14 @@ async function run(options: RunOptions = {}) {
     jsonPath: CONFIG_FILE,
     initialConfig: {
       // ...config,
-      providers: config.Providers || config.providers,
+      providers: (config.Providers || config.providers)?.map((p: any) => {
+        if (p.apim_key) {
+          p.headers = Object.assign({}, p.headers, {
+            "Ocp-Apim-Subscription-Key": p.apim_key,
+          });
+        }
+        return p;
+      }),
       HOST: HOST,
       PORT: servicePort,
       LOG_FILE: join(

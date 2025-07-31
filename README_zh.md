@@ -147,6 +147,15 @@ npm install -g @musistudio/claude-code-router
         "claude-opus-4-20250514",
         "gemini-2.5-pro"
       ]
+    },
+    {
+      "name": "AMD LLM GW",
+      "api_base_url": "https://llm-api.amd.com/azure/openai/deployments/your-deployment/chat/completions?api-version=2024-02-15-preview",
+      "api_key": "sk-",
+      "apim_key": "7cce1ac73d98442c844bb040b983114c",
+      "models": [
+        "gpt-4"
+      ]
     }
   ],
   "Router": {
@@ -195,6 +204,7 @@ ccr ui
 -   `name`: 提供商的唯一名称。
 -   `api_base_url`: 聊天补全的完整 API 端点。
 -   `api_key`: 您提供商的 API 密钥。
+-   `apim_key`（可选）：Azure APIM 訂閱金鑰，會以 `Ocp-Apim-Subscription-Key` 標頭傳送。
 -   `models`: 此提供商可用的模型名称列表。
 -   `transformer` (可选): 指定用于处理请求和响应的转换器。
 

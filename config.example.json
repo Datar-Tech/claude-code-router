@@ -102,6 +102,14 @@
           "enhancetool"
         ]
       }
+    },
+    {
+      "name": "AMD LLM GW",
+      "api_base_url": "https://llm-api.amd.com/azure/openai/deployments/your-deployment/chat/completions?api-version=2024-02-15-preview",
+      "api_key": "",
+      "apim_key": "7cce1ac73d98442c844bb040b983114c",
+      "models": ["gpt-4"],
+      "transformer": {}
     }
   ],
   "Router": {
