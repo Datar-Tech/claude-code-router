@@ -21,6 +21,7 @@ export interface Provider {
   name: string;
   api_base_url: string;
   api_key: string;
+  apim_key?: string;
   models: string[];
   transformer?: ProviderTransformer;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

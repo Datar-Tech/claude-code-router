@@ -49,6 +49,7 @@
     "name": "Name",
     "api_base_url": "API Base URL",
     "api_key": "API Key",
+    "apim_key": "APIM Key",
     "models": "Models",
     "models_placeholder": "Enter model name and press Enter to add",
     "add_model": "Add Model",

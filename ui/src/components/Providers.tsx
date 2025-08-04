@@ -65,7 +65,7 @@ export function Providers() {
 
 
   const handleAddProvider = () => {
-    const newProviders = [...config.Providers, { name: "", api_base_url: "", api_key: "", models: [] }];
+    const newProviders = [...config.Providers, { name: "", api_base_url: "", api_key: "", apim_key: "", models: [] }];
     setConfig({ ...config, Providers: newProviders });
     setEditingProviderIndex(newProviders.length - 1);
   };
@@ -398,6 +398,10 @@ export function Providers() {
               <div className="space-y-2">
                 <Label htmlFor="api_key">{t("providers.api_key")}</Label>
                 <Input id="api_key" type="password" value={editingProvider.api_key || ''} onChange={(e) => handleProviderChange(editingProviderIndex, 'api_key', e.target.value)} />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="apim_key">{t("providers.apim_key")}</Label>
+                <Input id="apim_key" type="password" value={editingProvider.apim_key || ''} onChange={(e) => handleProviderChange(editingProviderIndex, 'apim_key', e.target.value)} />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="models">{t("providers.models")}</Label>
