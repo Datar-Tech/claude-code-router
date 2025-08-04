@@ -1,4 +1,4 @@
-import Server from "@datartech/llms";
+import Server from "@musistudio/llms";
 import { readConfigFile, writeConfigFile } from "./utils";
 import { CONFIG_FILE } from "./constants";
 import { join } from "path";
